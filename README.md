@@ -148,11 +148,57 @@ versions are pinned in `requirements.txt` against the tested environment
 
 ## Key findings
 
-A summary is written at the end of Notebook 04. In brief, across descriptive,
-inferential, and predictive analyses the data support the mode-of-engagement
-hypothesis: *how* GenAI is used explains student outcomes better than *how much*
-it is used, and traditional study time remains the dominant lever on grade
-improvement.
+Across descriptive, inferential, and predictive analyses the data support the
+mode-of-engagement hypothesis: *how* GenAI is used explains student outcomes
+better than *how much* it is used, and traditional study time remains the
+dominant lever on grade improvement. The four figures below summarise the
+load-bearing results; each is reproduced from the notebooks and stored in
+`reports/figures/`.
+
+### Finding 1 - The intensity-retention relationship is non-monotonic
+
+![Skill retention across generative-AI usage bands, showing an inverted-U with a moderate-use optimum.](reports/figures/fig1_dose_response.png)
+
+**Figure 1.** Mean skill-retention score across ordered weekly-usage bands, with
+95% confidence intervals. Retention rises from minimal (75.6) through light
+(76.6) to a peak at moderate use (77.0, 8-15 h/week) and then falls sharply for
+heavy users (72.7). A quadratic regression confirms the curvature (negative
+squared term, *p* < 1e-150; estimated optimum near 9 weekly hours). Usage
+intensity therefore has an optimum rather than a monotonic effect.
+
+### Finding 2 - Purpose separates outcomes more than volume
+
+![Mean semester GPA change by primary use case, with cognitive offloading lowest and debugging highest.](reports/figures/fig2_use_case.png)
+
+**Figure 2.** Mean within-student GPA change by primary use case (95% CI). The
+cognitive-offloading pattern - direct answer generation (red) - is associated
+with the smallest grade improvement (+0.133), while analytic and generative uses
+such as debugging (+0.249) rank highest. One-way ANOVA rejects equality of means
+(*p* < 1e-16); the offloading-versus-analytic contrast has Cohen's *d* = -0.43.
+
+### Finding 3 - Prompt-engineering skill lifts retention within every usage band
+
+![Grouped bars of skill retention by usage band and prompt-engineering skill level.](reports/figures/fig4_prompt_skill.png)
+
+**Figure 3.** Mean skill retention by usage band and prompt-engineering skill.
+Within every intensity band, advanced prompt users retain more skill than
+beginners, and the advantage widens under heavy use - competence with the tool,
+not abstinence from it, protects the heavy-use group. The effect survives
+controlling for usage volume in a multiple regression (Notebook 03).
+
+### Finding 4 - Correlation structure of the study variables
+
+![Pearson correlation matrix of the numeric study variables on a blue-to-red diverging scale.](reports/figures/fig3_correlation.png)
+
+**Figure 4.** Pearson correlation matrix (blue-to-red diverging scale about a
+neutral zero). Grade improvement (`GPA_Delta`) is most strongly associated with
+traditional study hours; skill retention correlates positively with prompt skill
+and tool diversity and negatively with weekly GenAI hours and perceived
+dependency - the inverted-U and offloading stories visible in a single map. A
+standardised multiple regression (Notebook 03) confirms that study time is the
+dominant lever, with GenAI usage patterns acting at the margin.
+
+A full narrative synthesis is written at the end of Notebook 04.
 
 ## Limitations
 
