@@ -1,0 +1,17 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Processed data is regenerable by running notebooks/01_*.ipynb.
+# Uncomment the next line to keep it out of version control:
+# data/processed/

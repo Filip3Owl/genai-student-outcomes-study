@@ -1,0 +1,22 @@
+# Reproducible environment for the AI Student Impact study.
+# Python 3.14.x. Versions pinned to the tested, working environment.
+# Install:  python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+
+# --- Core data stack ---
+numpy==2.5.1
+pandas==3.0.3
+scipy==1.18.0
+
+# --- Statistical modelling ---
+statsmodels==0.14.6
+scikit-learn==1.9.0
+
+# --- Visualisation ---
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# --- Notebook environment ---
+jupyter==1.1.1
+jupyterlab==4.6.1
+notebook==7.6.0
+ipykernel==7.3.0
