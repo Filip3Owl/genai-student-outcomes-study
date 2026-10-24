@@ -7,9 +7,9 @@ work within a single academic cycle, yet public debate remains anchored to a
 crude question: *how much* students use it. This study argues that intensity of
 use is the wrong variable. Using a cross-sectional dataset of 50,000 students
 spanning five academic disciplines, we test the **mode-of-engagement
-hypothesis**: that academic outcomes are governed by *how* GenAI is used — the
+hypothesis**: that academic outcomes are governed by *how* GenAI is used (the
 task it is applied to, the skill with which it is prompted, and the degree of
-dependency it creates — rather than by weekly hours alone. We combine
+dependency it creates) rather than by weekly hours alone. We combine
 descriptive analysis, formal statistical inference, and supervised machine
 learning to characterise three outcomes: change in grade-point average across a
 semester (`GPA_Delta`), a `Skill_Retention_Score`, and categorical
@@ -86,13 +86,13 @@ educational-equity issue rather than a compliance problem.
 
 Constructed in Notebook 01 and reused downstream:
 
-- `GPA_Delta = Post_Semester_GPA - Pre_Semester_GPA` — the primary continuous
+- `GPA_Delta = Post_Semester_GPA - Pre_Semester_GPA`: the primary continuous
   outcome (semester grade improvement).
-- `GenAI_Intensity_Band` — binned weekly hours (None/Light/Moderate/Heavy) for
+- `GenAI_Intensity_Band`: binned weekly hours (None/Light/Moderate/Heavy) for
   dose-response analysis.
-- `Study_AI_Ratio` — traditional study hours relative to GenAI hours, a proxy
+- `Study_AI_Ratio`: traditional study hours relative to GenAI hours, a proxy
   for whether AI complements or replaces study.
-- `Offloading_Use` — binary flag for cognitive-offloading use cases
+- `Offloading_Use`: binary flag for cognitive-offloading use cases
   (direct answer generation) versus analytic/generative use.
 
 ## Repository structure
@@ -116,19 +116,19 @@ Constructed in Notebook 01 and reused downstream:
 
 ## Analytical workflow
 
-1. **Notebook 01 — Data understanding and quality.** Profiling, integrity and
+1. **Notebook 01: Data understanding and quality.** Profiling, integrity and
    plausibility checks, outlier characterisation, feature engineering, and
    persistence of a clean analysis table to `data/processed/`.
-2. **Notebook 02 — Exploratory data analysis.** Univariate distributions,
+2. **Notebook 02: Exploratory data analysis.** Univariate distributions,
    bivariate relationships, the dose-response curve, use-case comparisons, and a
-   correlation structure — rendered with a single, colour-vision-safe visual
+   correlation structure, rendered with a single, colour-vision-safe visual
    system.
-3. **Notebook 03 — Statistical inference.** Formal tests behind the claims:
+3. **Notebook 03: Statistical inference.** Formal tests behind the claims:
    correlation with confidence intervals, one-way ANOVA and post-hoc contrasts
    across use cases, a quadratic term test for the inverted-U, and a
    multiple-regression model (OLS) that isolates each factor's contribution.
-4. **Notebook 04 — Predictive modelling.** Supervised learning for two tasks —
-   classifying burnout risk and regressing skill retention — with a
+4. **Notebook 04: Predictive modelling.** Supervised learning for two tasks
+   (classifying burnout risk and regressing skill retention), with a
    leakage-aware pipeline, model comparison against baselines, honest
    held-out evaluation, and permutation-importance explanations.
 
